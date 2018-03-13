@@ -36,6 +36,14 @@ oauth2 = OAuth2(CLIENT_ID, CLIENT_SECRET, access_token=ACCESS_TOKEN)
 client = Client(oauth2, LoggingNetwork())
 
 def upload(filepath, typechange = None, headers = True, namefile = 'output'):
+	"""
+	upload is a function that uploads files directly from local to the Box cloud
+	Inputs:
+		filepath: string path to the filepath
+		typechange: string such as "html", "xml" or "json" denoting the type of file to be saved as
+		headers: boolean if the file has a header or not
+		namefile: string of the file name to be saved as 
+	"""
 	if typechange == None:
 		box_file = client.folder('0').upload(filepath)
 	elif headers == False:
@@ -78,10 +86,10 @@ def upload(filepath, typechange = None, headers = True, namefile = 'output'):
 		else:
 			raise ValueError('Sorry, type change not recognized')
 
+#Example calls
 #upload('/Users/shsu/Downloads/t.csv', 'html', headers = False, namefile = 'stephen')
 #upload('/Users/shsu/Downloads/t.csv', 'xml', headers = False)
 #upload('/Users/shsu/Downloads/t.csv', 'json', headers = False)
-
 upload('/Users/shsu/Downloads/aapl.csv', 'html', headers = True, namefile = 'boxrules')
 
 

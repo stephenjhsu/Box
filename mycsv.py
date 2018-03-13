@@ -1,6 +1,9 @@
 import sys
 
 def getdata(file):
+    """
+    getdata takes in a string path and reads it in without using any packages
+    """
     f = open(file, "r")
     data = f.read()
     f.close()
@@ -23,7 +26,5 @@ def readcsv(data, headers = True):
         return header, data
     else:
         return line_list
-
-
 
 #print(readcsv(getdata('/Users/shsu/Downloads/t.csv')))

@@ -1,6 +1,13 @@
+"""
+csv2json takes in a csv file and transforms it into a json file
+"""
+
 import mycsv
 
 def jsonfunc(header, data):
+	"""
+	jsonfunc takes in a header line and the data and converts it into json format
+	"""
 	jsonString = '{' + "\n" + '	"headers": [' + "\n"
 	header2 = ','.join(header)
 	for i in range(len(header)-1):
@@ -29,6 +36,9 @@ def jsonfunc(header, data):
 
 
 def jsonfunc2(data):
+	"""
+	jsonfunc2 takes in the data and converts it into json format
+	"""
 	jsonString = '{' + "\n" + '	"headers": [' + "\n"
 	header = list(map(chr, range(97, 97+len(data[0]))))
 	header2 = ','.join(header)

@@ -1,6 +1,6 @@
 # Box
 
-The file contains the code to upload csv files (comma seperated values) directly into a personal Box account and also the ability to transform the file from csv to html, csv to json, or csv to xml. The directory includes:
+This repo contains the code to upload csv files (comma seperated values) directly into a personal Box account with the ability to transform the file from csv to html, csv to json, or csv to xml. The directory includes:
 
 * boxupload.py - the main file for uploading and transforming files 
 * mycsv - get data and splits csv into data without calling a package

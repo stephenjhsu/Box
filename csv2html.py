@@ -1,6 +1,13 @@
 import mycsv
 
+"""
+csv2html takes in a csv file and transforms it into a html file
+"""
+
 def htmlfunc(header, data):
+	"""
+	htmlfunc takes in a header line and the data and converts it into html format
+	"""
 	a = '<html>' + '\n' + '<body>' + '\n' '<table>' + '\n'
 	a += '<tr>'
 	for item in header:
@@ -16,6 +23,9 @@ def htmlfunc(header, data):
 	return a
 
 def htmlfunc2(data):
+	"""
+	htmlfunc2 takes in the data and converts it into html format
+	"""
 	header = list(map(chr, range(97, 97+len(data[0]))))
 	a = '<html>' + '\n' + '<body>' + '\n' '<table>' + '\n'
 	a += '<tr>'

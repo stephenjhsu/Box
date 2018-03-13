@@ -1,6 +1,13 @@
 import mycsv
 
+"""
+csv2xml takes in a csv file and transforms it into a xml file
+"""
+
 def xmlfunc(header, data):
+	"""
+	xmlfunc takes in a header line and the data and converts it into xml format
+	"""
 	header2 = header
 	xmlString = ''
 	for i in range(len(header2)):
@@ -25,6 +32,9 @@ def xmlfunc(header, data):
 
 
 def xmlfunc2(data):
+	"""
+	xmlfunc2 takes in the data and converts it into xml format
+	"""
 	header2 = list(map(chr, range(97, 97+len(data[0]))))
 	xmlString = ''
 	for i in range(len(header2)):
